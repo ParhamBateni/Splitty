@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="513.0" maxWidth="478.0" minHeight="360.0" minWidth="400.0" prefHeight="513.0" prefWidth="478.0"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="client.scenes.OverviewInfoCtrl">
+    <styleClass>
+        <String fx:value="popup-background"/>
+    </styleClass>
+    <Text fx:id="inviteTitle" fill="blue" layoutX="142.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="Client Shortcuts" textAlignment="CENTER" wrappingWidth="193">
+        <font>
+            <Font size="45.0"/>
+        </font>
+        <styleClass>
+            <String fx:value="large_text"/>
+            <String fx:value="bold"/>
+        </styleClass>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow/>
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Button fx:id="okButton" layoutX="187.0" layoutY="454.0" mnemonicParsing="false" onAction="#goBack"
+            prefHeight="36.0" prefWidth="109.0" text="Go back">
+        <font>
+            <Font size="10.0"/>
+        </font>
+        <styleClass>
+            <String fx:value="button"/>
+            <String fx:value="normal_text"/>
+        </styleClass>
+    </Button>
+    <VBox layoutX="21.0" layoutY="60.0" prefHeight="366.0" prefWidth="442.0">
+        <children>
+            <VBox prefHeight="239.0" prefWidth="442.0" spacing="6.0">
+                <children>
+                    <Text fx:id="overviewPageText" fill="blue" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="bold"
+                          text="Overview Page">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <effect>
+                            <Lighting>
+                                <bumpInput>
+                                    <Shadow/>
+                                </bumpInput>
+                            </Lighting>
+                        </effect>
+                    </Text>
+                    <Text fx:id="settleDebtShortcutText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text"
+                          text="- D (keyboard): settle debts" wrappingWidth="304.71112060546875">
+                        <font>
+                            <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets left="20.0"/>
+                        </VBox.margin>
+                    </Text>
+                    <Text fx:id="editParticipantShortcutText" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="normal-text" text="- E (keyboard): edit participant"
+                          wrappingWidth="323.39251708984375">
+                        <font>
+                            <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets left="20.0"/>
+                        </VBox.margin>
+                    </Text>
+                    <Text fx:id="inviteParticipantShortcutText" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="normal-text" text="- I (keyboard): invite participant"
+                          wrappingWidth="325.3529052734375">
+                        <font>
+                            <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets left="20.0"/>
+                        </VBox.margin>
+                    </Text>
+                    <Text fx:id="addParticipantShortcutText" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="normal-text" text="- P (keyboard): add participant"
+                          wrappingWidth="283.214599609375">
+                        <font>
+                            <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets left="20.0"/>
+                        </VBox.margin>
+                    </Text>
+                    <Text fx:id="summaryShortcutText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text"
+                          text="- S (keyboard): open expense summary" wrappingWidth="302.1319580078125">
+                        <font>
+                            <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets left="20.0"/>
+                        </VBox.margin>
+                    </Text>
+                    <Text fx:id="addExpenseShortcutText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text"
+                          text="- X (keyboard): add expense" wrappingWidth="300.976806640625">
+                        <font>
+                            <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets left="20.0"/>
+                        </VBox.margin>
+                    </Text>
+                    <Text fx:id="doubleClickShortcutText" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="normal-text" text="- Double click on expenses (Mouse): open expenses to edit"
+                          wrappingWidth="305.64483642578125">
+                        <font>
+                            <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets left="20.0"/>
+                        </VBox.margin>
+                    </Text>
+                </children>
+                <padding>
+                    <Insets left="30.0"/>
+                </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="101.0" prefWidth="442.0">
+                <children>
+                    <Text fx:id="participantPageText" fill="blue" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="bold" text="Add/Edit Participant Page" textAlignment="CENTER">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <effect>
+                            <Lighting>
+                                <bumpInput>
+                                    <Shadow/>
+                                </bumpInput>
+                            </Lighting>
+                        </effect>
+                        <VBox.margin>
+                            <Insets bottom="6.0"/>
+                        </VBox.margin>
+                    </Text>
+                    <VBox prefHeight="59.0" prefWidth="412.0" spacing="6.0">
+                        <children>
+                            <Text fx:id="cheatShortcutText" strokeType="OUTSIDE" strokeWidth="0.0"
+                                  styleClass="normal-text" text="-  ALT + C (keyboard): fill in participant fields"
+                                  textAlignment="CENTER">
+                                <font>
+                                    <Font size="10.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="removeParticipantShortcutText" strokeType="OUTSIDE" strokeWidth="0.0"
+                                  styleClass="normal-text" text="- R (keyboard): remove participant (in edit page)"
+                                  textAlignment="CENTER">
+                                <font>
+                                    <Font size="10.0"/>
+                                </font>
+                            </Text>
+                        </children>
+                        <VBox.margin>
+                            <Insets left="20.0"/>
+                        </VBox.margin>
+                    </VBox>
+                </children>
+                <padding>
+                    <Insets left="30.0"/>
+                </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="394.0">
+                <children>
+                    <Text fx:id="expensePageText" fill="blue" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="bold"
+                          text="Add/Edit Expense Page" textAlignment="CENTER">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <effect>
+                            <Lighting>
+                                <bumpInput>
+                                    <Shadow/>
+                                </bumpInput>
+                            </Lighting>
+                        </effect>
+                        <VBox.margin>
+                            <Insets bottom="6.0"/>
+                        </VBox.margin>
+                    </Text>
+                    <HBox prefHeight="2.0" prefWidth="364.0" spacing="45.0">
+                        <children>
+                            <Text fx:id="removeExpenseShortcutText" strokeType="OUTSIDE" strokeWidth="0.0"
+                                  styleClass="normal-text" text="- R (keyboard): remove expense (in edit page)"
+                                  textAlignment="CENTER">
+                                <font>
+                                    <Font size="10.0"/>
+                                </font>
+                                <HBox.margin>
+                                    <Insets left="20.0"/>
+                                </HBox.margin>
+                            </Text>
+                        </children>
+                    </HBox>
+                </children>
+                <padding>
+                    <Insets left="30.0"/>
+                </padding>
+            </VBox>
+        </children>
+    </VBox>
+
+    <stylesheets>
+        <URL value="@client/styles/Styles.css"/>
+        <URL value="@../styles/Styles.css"/>
+    </stylesheets>
+
+</AnchorPane>

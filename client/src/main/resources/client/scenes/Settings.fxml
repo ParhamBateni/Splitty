@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="470.0" maxWidth="470.0" minHeight="470.0" minWidth="470.0" prefHeight="470.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SettingsCtrl">
+    <styleClass>
+        <String fx:value="background" />
+    </styleClass>
+   <Button fx:id="infoButton" layoutX="409.0" layoutY="22.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="40.0" prefWidth="40.0" styleClass="info_icon" />
+    <VBox alignment="TOP_CENTER" layoutX="62.0" layoutY="87.0" prefHeight="357.0" prefWidth="367.0" spacing="5.0">
+        <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="container1">
+                <children>
+                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="334.0" spacing="5.0">
+                        <children>
+                            <Button focusTraversable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="41.0" styleClass="email_icon" />
+                            <Text fx:id="emailText" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="96.59996795654297">
+                                <font>
+                                    <Font size="45.0" />
+                                </font>
+                                <styleClass>
+                                    <String fx:value="large_text" />
+                                    <String fx:value="bold" />
+                                    <String fx:value="white" />
+                                </styleClass>
+                            </Text>
+                            <Button fx:id="testButton" mnemonicParsing="false" onAction="#testEmail" prefHeight="30.0" prefWidth="80.0" text="Test">
+                                <HBox.margin>
+                                    <Insets left="120.0" />
+                                </HBox.margin>
+                            </Button>
+                        </children>
+                        <VBox.margin>
+                            <Insets />
+                        </VBox.margin>
+                        <styleClass>
+                            <String fx:value="header-container" />
+                            <String fx:value="dark-blue-fill" />
+                        </styleClass>
+                        <padding>
+                            <Insets bottom="10.0" top="10.0" />
+                        </padding>
+                    </HBox>
+                    <HBox prefHeight="101.0" prefWidth="367.0">
+                        <children>
+                            <Text fx:id="usernameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username: " wrappingWidth="168.19996643066406">
+                                <font>
+                                    <Font size="45.0" />
+                                </font>
+                                <styleClass>
+                                    <String fx:value="large_text" />
+                                    <String fx:value="bold" />
+                           <String fx:value="black-font" />
+                                </styleClass>
+                            </Text>
+                            <TextField fx:id="emailTextField" prefHeight="36.0" prefWidth="175.0" promptText="Enter Email">
+                                <styleClass>
+                                    <String fx:value="normal_text" />
+                                    <String fx:value="bold" />
+                                    <String fx:value="container1" />
+                                    <String fx:value="white" />
+                                </styleClass>
+                            </TextField>
+                        </children>
+                        <padding>
+                            <Insets left="10.0" top="10.0" />
+                        </padding>
+                        <VBox.margin>
+                            <Insets />
+                        </VBox.margin>
+                    </HBox>
+                    <HBox prefHeight="81.0" prefWidth="367.0">
+                        <children>
+                            <Text fx:id="passwordText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="168.19996643066406">
+                                <font>
+                                    <Font size="45.0" />
+                                </font>
+                                <styleClass>
+                                    <String fx:value="large_text" />
+                                    <String fx:value="bold" />
+                           <String fx:value="black-font" />
+                                </styleClass>
+                            </Text>
+                            <TextField fx:id="passwordTextField" prefHeight="36.0" prefWidth="175.0" promptText="Enter password">
+                                <styleClass>
+                                    <String fx:value="normal_text" />
+                                    <String fx:value="bold" />
+                                    <String fx:value="container1" />
+                                    <String fx:value="white" />
+                                </styleClass>
+                            </TextField>
+                        </children>
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" top="10.0" />
+                        </padding>
+                    </HBox>
+                    <Text fx:id="emailTestResultText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0">
+                        <styleClass>
+                            <String fx:value="bold" />
+                            <String fx:value="normal_text" />
+                        </styleClass>
+                    </Text>
+                </children>
+                <padding>
+                    <Insets bottom="10.0" />
+                </padding>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="367.0" styleClass="container1">
+                <children>
+                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="282.0" spacing="5.0">
+                        <children>
+                            <Button focusTraversable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="41.0" styleClass="currency_icon" />
+                            <Text fx:id="currencyText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Currency: " wrappingWidth="197.00000762939453">
+                                <font>
+                                    <Font size="45.0" />
+                                </font>
+                                <styleClass>
+                                    <String fx:value="large_text" />
+                                    <String fx:value="bold" />
+                                </styleClass>
+                            </Text>
+                        </children>
+                        <styleClass>
+                            <String fx:value="header-container" />
+                            <String fx:value="dark-blue-fill" />
+                        </styleClass>
+                        <padding>
+                            <Insets bottom="10.0" top="10.0" />
+                        </padding>
+                    </HBox>
+                    <HBox prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                            <Text fx:id="preferredCurrencyText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Preferred Currency:" wrappingWidth="245.0000228881836">
+                                <font>
+                                    <Font size="45.0" />
+                                </font>
+                                <styleClass>
+                                    <String fx:value="large_text" />
+                                    <String fx:value="bold" />
+                           <String fx:value="black-font" />
+                                </styleClass>
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Text>
+                            <ComboBox fx:id="currency" prefHeight="30.0" prefWidth="104.0" promptText="Select" styleClass="button" />
+                        </children>
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" top="10.0" />
+                        </padding>
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+    </VBox>
+    <Button layoutX="24.0" layoutY="33.0" onAction="#goBack" prefHeight="30" prefWidth="30.0" styleClass="undo_icon" />
+    <Text fx:id="sceneTitle" fill="blue" layoutY="51.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" textAlignment="CENTER" wrappingWidth="470.0">
+        <font>
+            <Font size="45.0" />
+        </font>
+        <styleClass>
+            <String fx:value="title" />
+            <String fx:value="bold" />
+        </styleClass>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+
+    <stylesheets>
+        <URL value="@client/styles/Styles.css" />
+        <URL value="@../styles/Styles.css" />
+    </stylesheets>
+
+</AnchorPane>

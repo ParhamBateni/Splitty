@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="340.0" prefWidth="279.0" styleClass="background" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AdminShortcutsCtrl">
+    <styleClass>
+        <String fx:value="popup-background"/>
+    </styleClass>
+    <children>
+        <Label fx:id="shortcutsTitle" layoutX="67.0" layoutY="14.0" styleClass="bold" text="Shortcuts"
+               textFill="#0c28ff">
+            <font>
+                <Font size="35.0"/>
+            </font>
+        </Label>
+
+        <Label fx:id="shortcutO" layoutX="60.0" layoutY="73.0" prefHeight="51.0" prefWidth="159.0"
+               text="O - opens event overview from selected event" textAlignment="CENTER" wrapText="true"/>
+        <Label fx:id="shortcutS" layoutX="67.0" layoutY="124.0" prefHeight="30.0" prefWidth="159.0"
+               text="S - saves the selected event" textAlignment="CENTER" wrapText="true"/>
+        <Label fx:id="shortcutD" layoutX="60.0" layoutY="161.0" prefHeight="30.0" prefWidth="159.0"
+               text="D - deletes the selected event" textAlignment="CENTER" wrapText="true"/>
+        <Label fx:id="shortcutL" layoutX="60.0" layoutY="191.0" prefHeight="41.0" prefWidth="159.0"
+               text="L - Opens the event loading menu" textAlignment="CENTER" wrapText="true"/>
+        <Button fx:id="cancelButton" layoutX="114.0" layoutY="286.0" mnemonicParsing="false" onAction="#close"
+                text="Cancel"/>
+        <Label layoutX="60.0" layoutY="232.0" prefHeight="41.0" prefWidth="159.0" text="C - Opens the shortcuts menu"
+               textAlignment="CENTER" wrapText="true"/>
+        <Label fx:id="shortcutC" layoutX="60.0" layoutY="232.0" prefHeight="41.0" prefWidth="159.0" text="C - Opens the shortcuts menu"
+               textAlignment="CENTER" wrapText="true" />
+    </children>
+    <stylesheets>
+        <URL value="@client/styles/Styles.css"/>
+        <URL value="@../styles/Styles.css"/>
+    </stylesheets>
+</AnchorPane>

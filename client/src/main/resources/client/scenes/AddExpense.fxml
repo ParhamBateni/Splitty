@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="530.0" prefWidth="500.0" styleClass="popup-background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AddExpenseCtrl">
+
+    <children>
+        <Text fx:id="sceneTitle" fill="BLUE" layoutX="10.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Expense" textAlignment="CENTER" wrappingWidth="474.4">
+            <font>
+                <Font size="23.0" />
+            </font>
+            <styleClass>
+<!--                <String fx:value="large_text" />-->
+                <String fx:value="bold" />
+            </styleClass>
+        </Text>
+        <!--        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="30.0"-->
+        <!--                styleClass="undo_icon"/>-->
+        <VBox layoutX="13.0" layoutY="54.0" prefHeight="377.0" prefWidth="474.0" spacing="5.0" styleClass="container2">
+            <children>
+                <HBox alignment="CENTER_LEFT" minHeight="40.0" prefHeight="40.0" prefWidth="346.0">
+                    <children>
+                        <Text fx:id="questionPaid" strokeType="OUTSIDE" strokeWidth="0.0" text="Who paid?" wrappingWidth="114.4301528930664">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="bold" />
+                                <String fx:value="normal_text" />
+                                <String fx:value="white" />
+                            </styleClass>
+                        </Text>
+                        <ComboBox fx:id="selectPayer" prefHeight="30.0" prefWidth="98.0" promptText="Select" styleClass="button" />
+                    </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="40.0" prefHeight="40.0" prefWidth="229.0">
+                    <children>
+                        <Text fx:id="questionReason" strokeType="OUTSIDE" strokeWidth="0.0" text="What for?" wrappingWidth="112.83010864257812">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="bold" />
+                                <String fx:value="normal_text" />
+                                <String fx:value="white" />
+                            </styleClass>
+                        </Text>
+                        <TextField fx:id="titleName" prefHeight="30.0" prefWidth="262.0" promptText="Write here...">
+                            <styleClass>
+                                <String fx:value="bold" />
+                                <String fx:value="white" />
+                                <String fx:value="dark-blue-fill" />
+                            </styleClass>
+                        </TextField>
+                    </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="48.0" minHeight="40.0" prefHeight="40.0" prefWidth="229.0">
+                    <children>
+                        <Text fx:id="questionAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="How much?" wrappingWidth="112.83010864257812">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="bold" />
+                                <String fx:value="normal_text" />
+                                <String fx:value="white" />
+                            </styleClass>
+                        </Text>
+                        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="214.0" spacing="5.0">
+                            <children>
+                                <TextField fx:id="amount" prefHeight="30.0" prefWidth="115.0" promptText="Amount">
+                                    <styleClass>
+                                        <String fx:value="dark-blue-fill" />
+                                        <String fx:value="bold" />
+                                        <String fx:value="white" />
+                                    </styleClass>
+                                </TextField>
+                                <ComboBox fx:id="currency" prefHeight="30.0" prefWidth="104.0" promptText="Currency" styleClass="button" />
+                            </children>
+                        </HBox>
+                    </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="87.0" minHeight="40.0" prefHeight="40.0" prefWidth="350.0">
+                    <children>
+                        <Text fx:id="questionDate" strokeType="OUTSIDE" strokeWidth="0.0" text="When?" wrappingWidth="112.83010864257812">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="bold" />
+                                <String fx:value="normal_text" />
+                                <String fx:value="white" />
+                            </styleClass>
+                        </Text>
+                        <DatePicker fx:id="datePicker" prefHeight="30.0" prefWidth="114.0" promptText="Choose date" />
+                    </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" minHeight="40.0" prefHeight="40.0" prefWidth="354.0">
+                    <children>
+                        <Text fx:id="questionSplit" strokeType="OUTSIDE" strokeWidth="0.0" text="How to split?" wrappingWidth="112.83010864257812">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="bold" />
+                                <String fx:value="normal_text" />
+                                <String fx:value="white" />
+                            </styleClass>
+                        </Text>
+                        <CheckBox fx:id="splitEquallyCheckBox" mnemonicParsing="false" styleClass="bold" text="Equally Between Participants">
+                        <styleClass>
+                            <String fx:value="check-box1" />
+                        </styleClass>
+                        </CheckBox>
+                    </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+                </HBox>
+                <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="130.0" prefWidth="450.0" style="-fx-background-color: transparent;">
+                    <content>
+                        <FlowPane fx:id="participantFlowPane" hgap="20.0" prefHeight="114.0" prefWidth="449.0" style="-fx-background-radius: 5px;" vgap="5.0">
+                            <styleClass>
+                                <String fx:value="dark-blue-fill" />
+                                <String fx:value="bold" />
+                                <String fx:value="white" />
+                            </styleClass>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </FlowPane>
+                    </content>
+                </ScrollPane>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="466.0" prefHeight="42.0" prefWidth="474.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="196.0">
+               <children>
+                  <Button fx:id="removeButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#remove" prefHeight="35.0" prefWidth="84.0" text="Remove" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="302.0" spacing="6.0">
+               <children>
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#editCancel" prefHeight="35.0" prefWidth="84.0" text="Cancel" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="112.0" text="Add" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+          <Text fx:id="resultAddEditText" fill="green" layoutX="22.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="bold" textAlignment="CENTER" wrappingWidth="449.111328125" />
+    </children>
+    <stylesheets>
+        <URL value="@client/styles/Styles.css" />
+        <URL value="@../styles/Styles.css" />
+    </stylesheets>
+
+</AnchorPane>

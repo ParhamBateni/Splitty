@@ -1,0 +1,22 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.2'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+java {
+	sourceCompatibility = '21'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation group: 'jakarta.activation', name: 'jakarta.activation-api', version: '2.0.1'
+	implementation group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '3.0.3'
+	implementation group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '3.0.3'
+	implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '3.0.3'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	runtimeOnly 'com.h2database:h2'
+	implementation project(":commons")
+}

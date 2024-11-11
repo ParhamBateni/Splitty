@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.StartCtrl">
+    <styleClass>
+        <String fx:value="background" />
+    </styleClass>
+    <Button layoutX="23.0" layoutY="19.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="41.0" styleClass="admin_icon" />
+    <Text fill="blue" layoutX="231.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Splitty" textAlignment="CENTER">
+        <font>
+            <Font size="45.0" />
+        </font>
+        <styleClass>
+            <String fx:value="title" />
+            <String fx:value="bold" />
+        </styleClass>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+   <Button fx:id="languageButton" layoutX="526.0" layoutY="19.0" mnemonicParsing="false" onAction="#changeLanguage" prefHeight="40.0" prefWidth="60.0" styleClass="language_icon" />
+   <Button layoutX="536.0" layoutY="64.0" mnemonicParsing="false" onAction="#showSettings" prefHeight="40.0" prefWidth="40.0" styleClass="settings_icon" />
+    <Button layoutX="536.0" layoutY="110.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="40.0" prefWidth="40.0" styleClass="info_icon" />
+
+    <VBox alignment="CENTER" layoutX="86.0" layoutY="84.0" prefHeight="250.0" prefWidth="442.0">
+        <children>
+            <Text fx:id="createEventTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Create New Event" textAlignment="CENTER" wrappingWidth="436.81601572036743">
+                <font>
+                    <Font size="16.0" />
+                </font>
+                <styleClass>
+                    <String fx:value="large_text" />
+                    <String fx:value="bold" />
+                </styleClass>
+            </Text>
+            <HBox alignment="CENTER_LEFT" minHeight="45.0" prefHeight="46.0" prefWidth="434.0" spacing="5.0">
+                <children>
+                    <TextField fx:id="createEventField" maxWidth="200.0" minHeight="30.0" onAction="#createEvent" prefHeight="30.0" prefWidth="200.0" promptText="Event Name">
+                        <HBox.margin>
+                            <Insets />
+                        </HBox.margin>
+                        <tooltip>
+                            <Tooltip fx:id="insertEventTooltip" text="Insert event name" />
+                        </tooltip>
+                    </TextField>
+                    <Button fx:id="createButton" mnemonicParsing="false" onAction="#createEvent" text="Create">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                        <styleClass>
+                            <String fx:value="button" />
+                            <String fx:value="normal_text" />
+                        </styleClass>
+                        <tooltip>
+                            <Tooltip fx:id="createEventTooltip" text="Click to create a new event" />
+                        </tooltip>
+                    </Button>
+                </children>
+                <padding>
+                    <Insets bottom="5.0" left="80.0" right="5.0" top="5.0" />
+                </padding>
+            </HBox>
+            <Text fx:id="createEventErrorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0">
+                <styleClass>
+                    <String fx:value="bold" />
+                    <String fx:value="normal_text" />
+                </styleClass>
+            </Text>
+            <Text fx:id="joinEventTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Join Event" textAlignment="CENTER" wrappingWidth="428.6550660133362">
+                <font>
+                    <Font size="16.0" />
+                </font>
+                <styleClass>
+                    <String fx:value="large_text" />
+                    <String fx:value="bold" />
+                </styleClass>
+            <VBox.margin>
+               <Insets top="20.0" />
+            </VBox.margin>
+            </Text>
+            <HBox alignment="CENTER_LEFT" minHeight="45.0" prefHeight="52.0" spacing="5.0">
+                <children>
+                    <TextField fx:id="joinEventField" maxWidth="210.0" minHeight="30.0" onAction="#joinEvent" prefHeight="30.0" prefWidth="200.0" promptText="Event Link">
+                        <HBox.margin>
+                            <Insets />
+                        </HBox.margin>
+                        <tooltip>
+                            <Tooltip fx:id="insertInviteTooltip" text="Insert an invite code to join event" />
+                        </tooltip>
+                    </TextField>
+                    <Button fx:id="joinButton" mnemonicParsing="false" onAction="#joinEvent" text="Join">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                        <styleClass>
+                            <String fx:value="button" />
+                            <String fx:value="normal_text" />
+                        </styleClass>
+                        <tooltip>
+                            <Tooltip fx:id="joinEventTooltip" text="Click to join an event" />
+                        </tooltip>
+                    </Button>
+                </children>
+                <padding>
+                    <Insets bottom="5.0" left="80.0" right="5.0" top="5.0" />
+                </padding>
+            </HBox>
+            <Text fx:id="joinEventErrorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0">
+                <styleClass>
+                    <String fx:value="bold" />
+                    <String fx:value="normal_text" />
+                </styleClass>
+            </Text>
+        </children>
+        <styleClass>
+            <String fx:value="container" />
+            <String fx:value="dark-blue-fill" />
+            <String fx:value="blue-border" />
+        </styleClass>
+    </VBox>
+    <VBox fx:id="recentlyViewedEvents" alignment="TOP_CENTER" layoutX="77.0" layoutY="352.0" maxWidth="1.7976931348623157E308" prefHeight="210.0" prefWidth="460.0">
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Recently viewed events:">
+         <styleClass>
+            <String fx:value="large_text" />
+            <String fx:value="bold" />
+         </styleClass></Text>
+      <styleClass>
+         <String fx:value="container1" />
+         <String fx:value="black-font" />
+      </styleClass>
+    </VBox>
+
+
+    <stylesheets>
+        <URL value="@client/styles/Styles.css" />
+        <URL value="@../styles/Styles.css" />
+    </stylesheets>
+</AnchorPane>
